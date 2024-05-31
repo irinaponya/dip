@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style-1.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Панель</title>
+</head>
+<body>
+    <nav>
+        <div class="side-content">
+            <div class="profile">
+                <h4><%= user.firstname %> <%= user.lastname %></h4>
+                <small id="userRole"><%= user.role %></small>
+            </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a class="adminItem" id="titleContentBtn" href="#">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Заголовок</span>
+                </a></li>
+                <li><a class="adminItem" id="aboutContentBtn" href="#">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">О компании</span>
+                </a></li>
+                <li><a class="adminItem" id="requestsContentBtn" href="#">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Заявки</span>
+                </a></li>
+                <li><a class="adminItem" id="plusesContentBtn" href="#">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">Плюсы компании</span>
+                </a></li>
+                <li><a class="adminItem" id="servicesContentBtn" href="#">
+                    <i  class="uil uil-comments"></i>
+                    <span class="link-name">Услуги</span>
+                </a></li>
+                <li><a class="adminItem" id="objectsContentBtn" href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Объекты</span>
+                </a></li>
+                <li><a class="adminItem" id="gradeContentBtn" href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Отзывы</span>
+                </a></li>
+                <li><a class="adminItem" id="contactsContentBtn" href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Контакты</span>
+                </a></li>
+                <li><a id="servicesBtn" href="#">
+                    <i  class="uil uil-share"></i>
+                    <span class="link-name">Заявки на услугу</span>
+                </a></li>
+                <li><a id="allServicesBtn" href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Архив заявок услуг</span>
+                </a></li>
+                <li><a id="consultationsBtn" href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Заявки на консультацию</span>
+                </a></li>
+                <li><a id="allConsultationsBtn" href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Архив заявок на консультацию</span>
+                </a></li>
+                <li><a id="profileBtn" href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Профиль</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a id="exitBtn" href="#">
+                    <i class="uil uil-signout"></i>
+                    <form id="exitForm" method="POST" action="/exit">
+                        <span class="link-name">Выход</span>
+                    </form>
+                </a></li>
+                <li class="mode">
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+                      
+            <!--<img src="images/profile.jpg" alt="">-->
+            <p>
+                <label for="date">Вывести отчет принятых заявок от </label>
+                <input type="date" id="date" name="date"/>
+                <label for="date">до</label>
+                <input type="date" id="date" name="date"/>
+                <button type="submit" class="btn btn-primary">Отчет</button>&nbsp;
+            </p>
+        </div>
+        <input id="id" name="id" hidden type="text" value="<%= user.id %>">
+        <div class="dash-content">
+
+            <div id="titleContent" class="contentItem">
+                <h4 class="font-weight-bold py-3 mb-4">
+                    Заголовок
+                </h4>
+                        <form action="/titlecontent" method="POST" class="col-md-9">
+                            <div class="tab-content">
+                                <div class="tab-pane fade active show" id="account-general">
+                                        <div class="card-body pb-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Заголовок</label>
+                                                <input name="id" hidden type="text" value="<%= user.id %>">
+                                                <input id="titleInput" style="display: block; padding: 5px; border-radius: 5px;" type="text" name="titleContent">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right mt-3">
+                                        <button type="submit" class="btn btn-primary">Сохранить</button>&nbsp;
+                                    </div>
+                                </div>
+                            </form>
+            </div>
+
+            <div id="aboutContent" class="contentItem" class="container light-style flex-grow-1 container-p-y">
+                <h4 class="font-weight-bold py-3 mb-4">
+                    О компании
+                </h4>
+                        <form action="/about" enctype="multipart/form-data" method="POST" class="col-md-9">
+                            <div class="tab-content">
+                                <div class="tab-pane fade active show" id="account-general">
+                                        <div class="card-body pb-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Текст</label>
+                                                <input name="id" hidden type="text" value="<%= user.id %>">
+                                                <textarea id="aboutText" name="text" class="form-control aboutInput"
+                                                    rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body media align-items-center">
+                                        <img id="aboutImg1" src="" alt
+                                            class="d-block ui-w-80">
+                                        <div class="media-body ml-4">
+                                            <label class="btn btn-outline-primary">
+                                                Загрузить другое изображение
+                                                <input type="file" name="image1" accept="image/*" class="account-settings-fileinput aboutInput">
+                                            </label> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="card-body media align-items-center">
+                                        <img id="aboutImg2" src="" alt
+                                            class="d-block ui-w-80">
+                                        <div class="media-body ml-4">
+                                            <label class="btn btn-outline-primary">
+                                                Загрузить другое изображение
+                                                <input type="file" name="image2" accept="image/*" class="account-settings-fileinput aboutInput">
+                                            </label> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="text-right mt-3">
+                                        <button id="aboutSave" type="submit" class="btn btn-primary">Сохранить</button>&nbsp;
+                                    </div>
+                                </div>
+                            </form>
+            </div>
+
+            <div id="requestsContent" class="container light-style flex-grow-1 container-p-y contentItem">
+                <h4 class="font-weight-bold py-3 mb-4">
+                    Обратная связь
+                </h4>
+                        <form enctype="multipart/form-data" action="/servicecontent" method="POST" class="col-md-9">
+                            <div class="tab-content">
+                                <div class="tab-pane fade active show" id="account-general">
+                                        <div class="card-body pb-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Текст</label>
+                                                <input name="id" hidden type="text" value="<%= user.id %>">
+                                                <textarea id="requestsText" name="textService" class="form-control"
+                                                    rows="5">Ищите специалистов, которые могут помочь Вам по инженерным изысканиям? Тогда Вы в правильном решении! Оставьте заявку на приобретении услуги, и мы с Вами обязательно свяжемся.</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body media align-items-center">
+                                        <img id="requestsImg" src="/img/geo.png" alt
+                                            class="d-block ui-w-80">
+                                        <div class="media-body ml-4">
+                                            <label class="btn btn-outline-primary">
+                                                Загрузить другое изображение
+                                                <input type="file" name="imageService" accept="image/*" class="account-settings-fileinput">
+                                            </label> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="text-right mt-3">
+                                        <button type="submit" class="btn btn-primary">Сохранить</button>&nbsp;
+                                    </div>
+                                </div>
+                            </form>
+            </div>
+
+            <div class="contentItem" id="pluses">
+                <div class="container">
+
+                    <header>
+                        <div class="addMemberBtn">
+                            <button>Добавить блок</button>
+                        </div>
+                    </header>
+            
+            
+                    <table>
+            
+                        <thead>
+                            <tr class="heading">
+                                <th>Номер блока</th>
+                                <th>Картинка</th>
+                                <th>Текст</th>
+                            </tr>
+                        </thead>
+            
+            
+                        <tbody class="userInfo">
+                            <!-- <tr><td class="empty" colspan="11" align="center"></td></tr> -->
+                            <!-- <tr>
+                            </tr> -->
+                        </tbody>
+            
+                    </table>
+            
+                </div>
+            
+                <div class="dark_bg">
+            
+                    <div class="popup">
+                         <header>
+                            <h2 class="modalTitle">Добавление блока</h2>
+                            <button class="closeBtn">&times;</button>
+                         </header>
+            
+                         <div class="body">
+                            <form enctype="multipart/form-data" method="POST" action="/plusescontent" id="myForm">
+                                <div class="imgholder">
+                                    <label for="uploadimg" class="upload">
+                                        <input name="id" hidden type="text" value="<%= user.id %>">
+                                        <input hidden type="text" name="plusId" id="plusId">
+                                        <input class="action" name="action" hidden type="text" value="Добавить">
+                                        <input src="/img/pic1.png" type="file" name="imagePluses" id="uploadimg" class="picture" required>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </label>
+                                    <img src="/img/pic1.png" alt="" width="150" height="150" class="img">
+                                </div>
+            
+                                <div class="inputFieldContainer">
+            
+                                    <div class="nameField">
+                                        <div class="form_control">
+                                            <label for="fName">Текст</label>
+                                            <input type="text" name="textPluses" id="fName" required>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </form>
+                         </div>
+            
+                         <footer class="popupFooter">
+                            <button type="submit" form="myForm" class="submitBtn">Добавить</button>
+                         </footer>
+                    </div>
+            
+                </div>
+            </div>
+
+            <div class="contentItem" id="objectsContent">
+                <div class="container">
+
+                    <header>
+                        <div class="addMemberBtn">
+                            <button>Добавить блок</button>
+                        </div>
+                    </header>
+            
+            
+                    <table>
+            
+                        <thead>
+                            <tr class="heading">
+                                <th>Номер блока</th>
+                                <th>Картинка</th>
+                                <th>Текст</th>
+                            </tr>
+                        </thead>
+            
+            
+                        <tbody class="userInfoObjects">
+                        </tbody>
+            
+                    </table>
+            
+                </div>
+            
+                <div class="dark_bg">
+            
+                    <div class="popup">
+                        <header>
+                            <h2 class="modalTitle">Добавление блока</h2>
+                            <button class="closeBtn">&times;</button>
+                        </header>
+            
+                        <div class="body">
+                            <form enctype="multipart/form-data" method="POST" action="/setobjects" id="myFormTwo">
+                                <div class="imgholder">
+                                    <label for="uploadimgObj" class="upload">
+                                        <input name="id" hidden type="text" value="<%= user.id %>">
+                                        <input hidden type="text" name="plusId" id="plusIdObj">
+                                        <input class="action" name="action" hidden type="text" value="Добавить">
+                                        <input src="/img/pic1.png" type="file" name="imageObjects" id="uploadimgObj" class="picture" required>
+                                        <i class="fa-solid fa-plus"></i>
+                                    </label>
+                                    <img src="/img/pic1.png" alt="" width="150" height="150" class="img">
+                                </div>
+            
+                                <div class="inputFieldContainer">
+            
+                                    <div class="nameField">
+                                        <div class="form_control">
+                                            <label for="fNameObjects">Текст</label>
+                                            <input type="text" name="textObjects" id="fNameObjects" required>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+            
+                        <footer class="popupFooter">
+                            <button type="submit" form="myFormTwo" class="submitBtn">Добавить</button>
+                        </footer>
+                    </div>
+            
+                </div>
+            </div>
+
+            <div class="contentItem" id="servicesContent">
+                            
+
+                <div class="container">
+
+                    <header>
+
+                        <div class="addMemberBtn">
+                            <button>Добавить услугу</button>
+                        </div>
+
+                    </header>
+
+
+                    <table>
+
+                        <thead>
+                            <tr class="heading">
+                                <th>Номер услуги</th>
+                                <th>Картинка</th>
+                                <th>Название услуги</th>
+                                <th>Текст</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody class="userInfoServices">
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+
+
+
+                <div class="dark_bg">
+
+                    <div class="popup">
+                        <header>
+                            <h2 class="modalTitle">Добавить форму</h2>
+                            <button class="closeBtn">&times;</button>
+                        </header>
+
+                        <div class="body">
+                            <form method="POST" enctype="multipart/form-data" action="/setservice" id="myFormThree">
+                                <input name="id" hidden type="text" value="<%= user.id %>">
+                                <input hidden type="text" name="plusIdSer" id="plusIdSer">
+                                <input class="action" name="action" hidden type="text" value="Добавить">
+                                <div class="imgholder">
+                                    <label for="uploadimgSer" class="upload">
+                                        <input type="file" name="imageServicesTitle" id="uploadimgSer" class="picture">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </label>
+                                    <img src="./img/pic1.png" alt="" width="150" height="150" class="img">
+                                </div>
+
+                                <div class="inputFieldContainer">
+
+                                    <div class="nameField">
+                                        <div class="form_control">
+                                            <label for="text1">Название услуги</label>
+                                            <input type="text" name="titleName" id="text1" required>
+                                        </div>
+
+                                        <div class="form_control">
+                                            <label for="text2">Текст</label>
+                                            <input type="text" name="titleText" id="text2" required>
+                                        </div>
+                                    </div>
+
+                                    <header>Подробное описание услуги</header>
+
+                                    <div class="ageCityField">
+                                        <div class="form_control">
+                                            <label for="text3">Заголовок</label>
+                                            <input type="text" name="infoTitle" id="text3" required>
+                                        </div>
+
+                                        <div class="form_control">
+                                            <label for="text4">Текст</label>
+                                            <input type="text" name="infoText" id="text4" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="imgholder1">
+                                        <label for="uploadimgSer1" class="upload1">
+                                            <input type="file" name="imageServicesInfo" id="uploadimgSer1" class="picture1">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </label>
+                                        <img src="./img/pic1.png" alt="" width="150" height="150" class="img1">
+                                    </div>
+
+                                    <div class="postSalary">
+                                        <div class="form_control">
+                                            <label for="text5">Подзаголовок</label>
+                                            <input type="text" name="infoSubtitle" id="text5" required>
+                                        </div>
+
+                                        <div class="form_control">
+                                            <label for="text6">Список</label>
+                                            <input id="infoList" type="text" name="infoList" hidden>
+                                            <input type="text" id="text6" >
+                                        </div>
+                                    </div>
+                                    <div class="list">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <footer class="popupFooter">
+                            <button class="addBtn">Добавить пункт</button>
+                            <button form="myFormThree" type="submit" class="submitBtn">Добавить</button>
+                        </footer>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contentItem" id="contactsContent">
+                <form action="/contacts" method="POST" class="container light-style flex-grow-1 container-p-y">
+                    <h4 class="font-weight-bold py-3 mb-4">
+                        Контакты
+                    </h4>
+                    <div class="card overflow-hidden">
+                        <div class="row no-gutters row-bordered row-border-light">
+                            <div class="col-md-9">
+                                <div class="tab-content">
+                                        <div class="card-body pb-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Номер телефона</label>
+                                                <input id="id" name="id" hidden type="text" value="<%= user.id %>">
+                                                <input id="contactsPhone" type="text" class="form-control" name="phone" value="+7 (986) 921 7433">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Почта email</label>
+                                                <input id="contactsEmail" type="text" class="form-control" name="email" value="izyskatelplusalmet@mail.ru">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Адрес</label>
+                                                <input id="contactsAddress" type="text" class="form-control" name="address" value="Республика Татарстан, г. Альметьевск, ул. Абдулаева д.2">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Карта</label>
+                                                <input id="contactsMap" type="text" name="map" class="form-control" value="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4035fb596237c119a0b4042f92a57aec10d10773a10118222d17854c46d33c2f&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right mt-3">
+                        <button type="submit" class="btn btn-primary">Сохранить</button>&nbsp;
+                    </div>
+                </form>
+            </div>
+            
+            <div class="contentItem" id="gradeContent">
+                <div class="header_fixed">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Услуга</th>
+                                <th>Наименование организации</th>
+                                <th>Отзыв</th>
+                                <th>Удалить</th>
+                            </tr>
+                        </thead>
+                        <tbody class="allGrades">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+
+            <div class="contentItem" id="content">
+
+            </div>
+            <div id="user" class="contentItem">
+                <div class="container light-style flex-grow-1 container-p-y">
+                    <h4 class="font-weight-bold py-3 mb-4">
+                        Настройки пользователя
+                    </h4>
+                    <div class="card overflow-hidden">
+                        <div class="row no-gutters row-bordered row-border-light">
+                            <div class="col-md-3 pt-0">
+                                <div class="list-group list-group-flush account-settings-links">
+                                    <a class="list-group-item list-group-item-action active actions" data-toggle="list"
+                                        href="#account-general">Общая информация</a>
+                                    <a class="list-group-item list-group-item-action actions" data-toggle="list"
+                                        href="#account-change-password">Сменить пароль</a>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade active show" id="account-general">
+                                        <div class="card-body media align-items-center">
+                                            <img src="/img/autoimg.png" alt
+                                                class="d-block ui-w-80">
+                                            <div class="media-body ml-4">
+                                                <label class="btn btn-outline-primary">
+                                                    Загрузить новую фотографию
+                                                    <input name="userImage" accept="image/*"  type="file" class="account-settings-fileinput">
+                                                </label> &nbsp;
+                                            </div>
+                                        </div>
+                                        <hr class="border-light m-0">
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <label class="form-label">Фамилия</label>
+                                                <input name="id" class="user-data" hidden type="text" value="<%= user.id %>">
+                                                <input type="text" class="form-control mb-1 user-data" value="<%= user.lastname %>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Имя</label>
+                                                <input type="text" class="form-control user-data" value="<%= user.firstname %>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Отчество</label>
+                                                <input type="text" class="form-control user-data" value="<%= user.patronymic %>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Логин</label>
+                                                <input type="text" class="form-control user-data" value="<%= user.username %>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">E-mail почта</label>
+                                                <input type="text" class="form-control mb-1 user-data" value="<%= user.email %>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Должность (роль)</label>
+                                                <input type="text" class="form-control user-data" value="<%= user.role %>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="account-change-password">
+                                        <div class="card-body pb-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Текущий пароль</label>
+                                                <input type="password" class="form-control password-data">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Новый пароль</label>
+                                                <input type="password" class="form-control password-data">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">Повторить новый пароль</label>
+                                                <input type="password" class="form-control password-data">
+                                            </div>
+                                            <div class="error">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right mt-3">
+                        <button id="save" type="button" class="btn btn-primary">Сохранить</button>&nbsp;
+                    </div>
+                </div>
+                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+            </div>
+        </div>      
+    </section>
+    <script src="js/admin.js"></script>
+</body>
+</html>

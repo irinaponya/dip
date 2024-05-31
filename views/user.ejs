@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход в личный кабинет</title> 
+  <link rel="stylesheet" href="/css/style.css"> 
+  <script src="/js/auto.js" defer></script>
+  <link rel="icon" href="/img/logo.png">
+ </head> 
+ <body> 
+        <div class="form-wrapper sign-in">
+            <form action="/adduser" method="POST">
+                <h2>Регистрация</h2>
+                <div class="input-group">
+                    <input type="text" id="username" name="username" required>
+                    <label for="">Фамилия</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="username" name="username" required>
+                    <label for="">Имя</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="username" name="username" required>
+                    <label for="">Отчество</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="password" name="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="">Логин</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="">Пароль</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="">Подтверждение пароля</label>
+                </div>
+                <button id="submitForm" type="submit" class="btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+ </body>
+</html>

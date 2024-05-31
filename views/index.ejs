@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Изыскатель плюс</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <!-- Меню -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="header__logo">
+        <img class="logo" src="/img/logo.svg" width="140" alt="">
+      </a>
+      <nav class="menu header__menu">
+        <ul class="menu__list header__menu-list">
+          <li class="menu__item">
+            <a href="#header-img" class="menu__link">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a href="#company" class="menu__link">Плюсы компании</a>
+          </li>
+          <li class="menu__item">
+            <a href="#container catalog__container" class="menu__link">Объекты</a>
+          </li>
+          <li class="menu__item">
+            <a href="#container" class="menu__link">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a href="#gradesContainer" class="menu__link">Отзывы</a>
+          </li>
+          <li class="menu__item">
+            <a href="#col-lg-8 order-lg-1 map-area" class="menu__link">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a href="/auto" class="menu__link">Вход</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!--Главная страница-->
+    <section class="layers">
+        <div class="layers__container">
+            <div class="layers__item layer-1" style="background-image: url(img/layer-1.jpg)"></div>
+            <div class="layers__item layer-2" style="background-image: url(img/layer-2.png)"></div>
+              <div class="layers__item layer-3">
+                <div class="hero-content">
+                  <h1 id="titleContent" class="hero-content__hear"></h1>
+                </div>
+              </div>
+              <div class="layers__item layer-5" style="background-image: url(img/layer-5.png)"></div>
+            </div>
+      </section>
+
+  <!-- О компании -->
+        <div class="header-row">
+          <div class="header-content" data-aos="fade-up">
+              <h1 class="header-heading">О КОМПАНИИ</h1> <p id="aboutText"> Многолетний опыт, высококлассные специалисты, профессионализм, экспертность и стремление быть лучшими.
+                «Изыскатель плюс» — одна из крупных, изыскательская компания в РТ.
+              ООО "Изыскатель плюс" имеет огромный опыт выполнения всех видов геодезических, геологических, экологических и гидрометеорологических работ. Мы являемся членом СРО НП "ВолгаКамИзыскания". Наша компания имеет собственную аттестованную лабораторию. За время существования на организации мы приобрели огромный опыт, сформировали отличную профессиональную команду.</p>
+          </div>
+
+          <div class id="header-img" data-aos="fade-left">
+
+              <picture>
+                  <source media="(max-width: 799px)" srcset="./img/header/hero-mobile.png">
+                  <img id="aboutImg1" src="" alt="">
+                  <img id="aboutImg2" src="" alt="">
+              </picture>
+
+          </div>
+      </div>
+  </div>
+</header>
+
+<section class id="company">
+  <h1 class="company-heading">Почему выбирают нас?<h1> 
+  <div class="container-3">
+
+      <div class="company-row">
+          <!-- <div class="company-card" data-aos="fade-down">
+              <img class="company-card-img" src="./img/company-2.png" alt=>
+              <p class="company-card-title">"Изыскатель плюс" успешно работающая компания на рынке с 2004 г.</p>
+          </div>
+
+          <div class="company-card" data-aos="fade-down">
+              <img class="company-card-img" src="./img/company-4.png" alt=>
+              <p class="company-card-title">Мы являемся членом СРО НП “ВолгаКамИзыскания“. Наша компания имеет собственную аттестованную лабораторию.</p>
+          </div>
+
+          <div class="company-card" data-aos="fade-down">
+              <img class="company-card-img" src="./img/company-3.png" alt=>
+              <p class="company-card-title">Наша команда зарекомендовала себя опытными профессионалами и надежными партнерами, способные в минимальные сроки решить вопросы различной сложности.</p>
+          </div> -->
+
+      </div>
+  </div>
+</section>
+
+      <!-- Обратная связь -->
+      <section id="requestsImg" class="callback">
+        <div class="callback__right">
+          <h2 class="callback__title">Обратная связь</h2>
+          <p id="requestsText" class="callback__desc">
+            Ищите специалистов, которые могут помочь Вам по инженерным изысканиям? Тогда Вы в правильном решении! Оставьте заявку на приобретении услуги, и мы с Вами обязательно свяжемся. 
+          </p>
+            <button id="submit">Оставить заявку</button>
+          </div>
+          <form action="/service" method="POST" class="form" id="form">
+            <div class="form-content">
+              <h2>Хотите приобрести услугу по инженерным изысканиям? Заполните заявку ниже и мы с Вами свяжемся!</h2>
+              <div class="form-group">
+                <input type="text" name="lastname" placeholder="Введите фамилию" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="firstname" placeholder="Введите имя" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="patronymic" placeholder="Введите отчество" required>
+              </div>
+              <select name="service" class="js-choice servicesList" required>
+                <option value="Выбрать услугу">Выбрать услугу</option>
+                <!-- <option value="Инженерно - геодезические изыскания">Инженерно - геодезические изыскания</option>
+                <option value="Инженерно - геологические изыскания">Инженерно - геологические изыскания</option>
+                <option value="Инженерно - экологические изыскания">Инженерно - экологические изыскания</option>
+                <option value="Инженерно - гидрометеоролигические изыскания">Инженерно - гидрометеоролигические изыскания</option> -->
+              </select>
+              <div class="form-group">
+                <input id="phone" name="phone" class="no-arrow" value="" type="number" placeholder="Ваш номер телефона">
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Почта">
+              </div>
+              <button type="submit">Отправить заявку</button>
+            </div>
+          </form>
+      </section>
+      
+      <!-- Услуги -->
+      <section class="services">
+      <div class id="container">
+        <h1 class="setion-headind">УСЛУГИ</h1>
+        <div class="card-container">
+
+          <!-- <div class="card">
+            <img src="/img/uslug1.jpg" alt="">
+            <div class="card-content">
+              <h1>Инженерно-геодезические изыскания</h1>
+              <p>Комплекс работ, направленный на получение информации о рельефе и ситуации местности.</p>
+              <button id="open-modal-btn">Подробнее</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="/img/uslug2.jpg" alt="">
+            <div class="card-content">
+              <h1>Инженерно-геологические изыскания</h1>
+              <p>Совокупность действий на начальном этапе строительства, которые направлены на оценку его целесообразности.</p>
+              <button id="open-modal-btn-1">Подробнее</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="/img/uslug3.jpg" alt="">
+            <div class="card-content">
+              <h1>Инженерно-экологические изыскания</h1>
+              <p>Получение материалов о состоянии компонентов окружающей среды, необходимых для подготовки документов территориального планирования.</p>
+              <button id="open-modal-btn-2">Подробнее</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="/img/uslug4.jpg" alt="">
+            <div class="card-content">
+              <h1>Инженерно-гидрометеорологические изыскания</h1>
+              <p>Выполняются для комплексного изучения гидрометеорологических условий территории (района, площадки, участка, трассы).</p>
+              <button id="open-modal-btn-3">Подробнее</button>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </section>
+
+<!-- Первая услуга -->
+
+<div class="modal-1" id="my-modal-1">
+  <div class="modal__box">
+      <button class="modal__close-btn" id="close-my-modal-btn">
+          <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                  fill="#333333" />
+              <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+          </svg>
+      </button>
+      <h2 id="infoTitle">Инженерно - геодезические изыскания</h2>
+
+      <p id="infoText">Геодезические изыскания — это комплекс работ, направленный на получение информации о рельефе и ситуации местности, который служит основой для проектирования и проведения других видов изысканий, кадастровых работ.</p>
+      <img id="infoImg" class="" src="img/geodesy.png" alt="">
+
+      <h3 id="infoSubtitle">Причины заказать у нас:</h3>
+      <ul id="infoList" style="list-style-type: none;list-style-image: url(img/marker.png)">
+        <!-- <li>Жесткое соблюдение сроков. Работы проводятся строго по регламенту с материальной ответственностью исполнителя за нарушение прописанных в договоре дат. У нас внедрены в работу современное лицензионное электронное оборудование и ПО, позволяющие уменьшить срок производства работ до 30% .</li>
+        <li>Наши специалисты действуют в соответствии с актуальными законодательными нормами и правилами Российской Федерации, имеют опыт взаимодействия со структурами различных уровней.</li>
+        <li>Достоверную и максимально полную информацию о территории изысканий. В нашем распоряжении имеется собственный специализированный парк современного оборудования и эффективной техники.</li>
+        <li>Экономию бюджета при минимуме временных затрат. Предоставьте нам вводные данные, необходимые для выполнения тех или иных изысканий и доступ на объект. Наши специалисты решат все вопросы с работой «в поле», оформлением и согласованием документов.</li> -->
+      </ul>
+  </div>
+</div>
+
+<!-- Вторая услуга -->
+<!-- 
+  <div class="modal-2" id="my-modal-2">
+    <div class="modal__box-1">
+        <button class="modal__close-btn-1" id="close-my-modal-btn-1">
+            <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                    fill="#333333" />
+                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+            </svg>
+        </button>
+        <h2>Инженерно - геологические изыскания</h2>
+
+        <p>Инженерно-геологические изыскания производятся с целью получения полной информации о геологическом строении участка, физико — механических параметрах грунтов и их  прочностных характеристик, гидро — геологических параметрах и возможности их изменения в процессе возведения и эксплуатации проектируемого объекта.</p>
+        <img class="" src="/img/geodesy-1.PNG" alt="">
+        <h3>В состав инженерно - геологических изысканий входят следующие виды работ:</h3>
+        <ul style="list-style-type: none;list-style-image: url(img/marker-2.png)">
+          <li>сбор, изучение и обобщение архивных материалов изысканий;</li>
+          <li>геолого-геоморфологические исследования;</li>
+          <li>проходка горных выработок  (инженерно-геологические скважины, шурфы и др.) механизированным и ручным способом;</li>
+          <li>статическое зондирование;</li>
+          <li>оценка инженерно-геологических условий территории;</li>
+          <li>инженерно-геологическое картографирование;</li>
+          <li>камеральная обработка материалов, подготовка и выпуск технического отчета.</li>
+        </ul>
+
+        <h2>Стоимость работ</h2>
+        <p>Стоимость инженерно-геологических изысканий для строительства зависит от степени сложности объекта и видов работ.</p>
+        <p>В цену инженерных работ включены следующие виды работ:</p>
+        <ul style="list-style-type: none;list-style-image: url(img/marker-2.png)">
+          <li>полевые работы;</li>
+          <li>лабораторные работы;</li>
+          <li>камеральные работы;</li>
+          <li>технический отчет по инженерно - геологическим изысканиям;</li>
+        </ul>
+      </div>
+</div> -->
+
+<!-- Третья услуга -->
+
+<!-- <div class="modal-3" id="my-modal-3">
+  <div class="modal__box-2">
+      <button class="modal__close-btn-2" id="close-my-modal-btn-2">
+          <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                  fill="#333333" />
+              <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+          </svg>
+      </button>
+      <h2>Инженерно - экологические изыскания</h2>
+
+      <p>Инженерно-экологические изыскания (ИЭИ) предполагают выполнение системных работ, связанных с изучением условий окружающей среды. Такие мероприятия дают возможность выявить, предотвратить, а при необходимости – ликвидировать неблагоприятные последствия экологического, социального, экономического и другого характера для населения, проживающего на определенной территории.</p>
+      <img class="" src="/img/geodesy-2.png" alt="">
+      <h3>Этапы экологических изысканий:</h3>
+      <ul style="list-style-type: none;list-style-image: url(img/marker-1.png)">
+        <li>Планирование и подготовка. Специалисты составляют план мероприятий, определяют сроки и составляют смету на выполнение работ. Также анализируются данные об участке, полученные ранее, в том числе, уже выполненных экологические изыскания, изучаются архивы природно-заповедных фондов, запрашиваются справки, предусмотренные законодательством.</li>
+        <li>Полевые работы. Изучаются ландшафт, отдельные природные компоненты, качество присутствующих на объекте экосистем, выявляются гипотетические источники и видимые признаки загрязнения. После этого отбираются пробы грунта, вод, включая подземные, донных отложений, выполняется измерение радиационного фона и показателей атмосферного воздуха. Параллельно изучаются флора и фауна участка.</li>
+        <li>Работы в лаборатории. Отобранные образцы исследуются. Полученные данные вносятся в сводные таблицы.</li>
+        <li>Камеральные работы. Включают тщательный анализ всего массива собранных материалов, составление отчета, а также подготовку рекомендаций, направленных на сохранение и восстановление окружающей природной среды.</li>
+      </ul>
+      <h2>Расчет стоимости инженерно - экологических изысканий</h2>
+      <p>У нас вы можете заказть инжнерно - экологические изыскания. Стоимость устанавливается индивидуально в зависимости от:</p>
+      <ul style="list-style-type: none;list-style-image: url(img/marker-1.png)">
+        <li>площади объекта;</li>
+        <li>уровня сложности и состава работ, которые необходимо выполнить в рамках ИЭИ;</li>
+        <li>состояния грунтов, воздушной, водной и других сред;</li>
+      </ul>
+      <p>Ображайтесь мы поможем Вам!</p>
+    </div>
+</div> -->
+
+<!-- Четвертая услуга -->
+
+<!-- <div class="modal-4" id="my-modal-4">
+  <div class="modal__box-3">
+      <button class="modal__close-btn-3" id="close-my-modal-btn-3">
+          <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                  fill="#333333" />
+              <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+          </svg>
+      </button>
+      <h2>Инженерно - гидрометеоролигические изыскания</h2>
+      <p>Инженерно-гидрометеорологические изыскания – это комплекс исследовательских работ, направленных на изучение, анализ и обработку сведений, полученных в ходе полевых испытаний гидрометеорологических условий для участка, предназначенного для размещения объекта капитального строительства.</p>
+      <img class="" src="/img/geodesy-3.png" alt="">
+      <h3>Инженерно-гидрометеорологическиек изыскания на участке, принадлежащем заказчику, проводятся для достижения следующих целей:</h3>
+      <ul style="list-style-type: none;list-style-image: url(img/marker-3.png)">
+        <li>Выбор приемлемого места для размещения пятна застройки планируемого сооружения.</li>
+        <li>Оформление топографического плана местности, разработка оптимального плана выполнения строительно-монтажных работ.</li>
+        <li>Организация наиболее экономичного и безопасного для окружающей среды способа использования подземных грунтовых вод.</li>
+        <li>Расчёт объёма потребляемой грунтовой воды для обеспечения нормальной эксплуатации планируемого к размещению на участке объекта.</li>
+        <li>Анализ степени возможного влияния, планируемого к размещению капитального сооружения на гидрометеорологические и климатические особенности исследуемой территории.</li>
+        <li>Разработка, выдача рекомендация для заказчика по защите планируемого к возведению капитального сооружения от негативных воздействий агрессивной окружающей среды.</li>
+      </ul>
+    <p>Стоимость слуги по проведению инженерно-гидрометеорологических изыскания зависит от типа объекта, протяжённости трасс линейных сооружений, площади участка, степени загрязнённости окружающей среды после техногенного вмешательства. Цена также во многом зависит от индивидуальных требований заказчика, комплектности отчётной документации, места предоставления технического отчёта о проведённых изысканиях и других факторов, отражающихся на себестоимости работ.</p>
+    </div>
+</div> -->
+
+    <!-- Объекты -->
+      <section class="catalog">
+        <div class id="container catalog__container"> 
+          <h2 class="subtitle catalog__subtitle">ГОТОВЫЕ ОБЪЕКТЫ</h2>
+          <ul class="catalog__list">
+            
+            <!-- <li class="catalog__item catalog__item_big">
+              <article class="product-card catalog__card product-card_big">
+                <img class="product-card__img product-card__img_big" src="/img/geo.png" alt="Объект">
+                <div class="product-card__body product-card__body_big">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      Нашей компанией проводились кадастровые и геодезические работы на территории Республики Татарстан.
+                    </h3>
+                  </div>
+                </div>
+              </article>
+            </li> -->
+            <!-- <li class="catalog__item catalog__item_big">
+              <article class="product-card catalog__card product-card_big">
+                <img class="product-card__img product-card__img_big" src="/img/geol.png" alt="Объект">
+                <div class="product-card__body product-card__body_big">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      Подготавливался ввод объектов в эксплуатацию значимых объектов г.Альметьевск
+                    </h3>
+                  </div>
+                </div>
+              </article>
+            </li> -->
+            <!-- <li class="catalog__item catalog__item_big">
+              <article class="product-card catalog__card product-card_big">
+                <img class="product-card__img product-card__img_big" src="/img/olimp.png" alt="Объект">
+                <div class="product-card__body product-card__body_big">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      ЖК "ОЛИМПИК LIFE" Г.АЛЬМЕТЬЕВСК
+                    </h3>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item catalog__item_big">
+              <article class="product-card catalog__card product-card_big">
+                <img class="product-card__img product-card__img_big" src="/img/rivr.png" alt="Объект">
+                <div class="product-card__body product-card__body_big">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      ЖК "РИВЬЕРА LIFE" Г.АЛЬМЕТЬЕВСК
+                    </h3>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item catalog__item_big">
+              <article class="product-card catalog__card product-card_big">
+                <img class="product-card__img product-card__img_big" src="/img/sobor.png" alt="Объект">
+                <div class="product-card__body product-card__body_big">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      КАЗАНСКИЙ СОБОР Г.АЛЬМЕТЬЕВСК
+                    </h3>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item catalog__item_big">
+              <article class="product-card catalog__card product-card_big">
+                <img class="product-card__img product-card__img_big" src="/img/prosp.png" alt="Объект">
+                <div class="product-card__body product-card__body_big">
+                  <div class="product-card__body-top">
+                    <h3 class="product-card__title">
+                      ПРОСПЕКТ ТУКАЯ Г.АЛЬМЕТЬЕВСК
+                    </h3>
+                  </div>
+                </div>
+              </article>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- Отзывы -->
+      <section class="testimonials-section">
+        <header class="section-header">
+          <h1>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h1>
+        </header>
+
+        <div id="gradesContainer" class="owl-carousel owl-theme testimonials-container">
+          </div>   
+          <form action="/grade" method="POST">
+            <div class="forma">
+              <div class="form-at">
+                <select  name="service" class="js-choice servicesList">
+                  <option>Выбрать услугу</option>
+                  <!-- <option>Инженерно - геодезические изыскания</option>
+                  <option>Инженерно - геологические изыскания</option>
+                  <option>Инженерно - экологические изыскания</option>
+                  <option>Инженерно - гидрометеоролигические изыскания</option> -->
+                </select>
+                  <div class="validate-input-at w-50" data-validate="Обязательное поле">
+                      <input class="input-at" type="text" name="name" placeholder="Ваше имя или название организации" />
+                      <span class="focus-input-at"></span>
+                  </div>
+                  <div class="validate-input-at" data-validate="Обязательное поле">
+                      <textarea class="input-at" name="text" placeholder="Ваш отзыв"></textarea>
+                      <span class="focus-input-at"></span>
+                  </div>
+                  <input checked="checked" class="input-at" id="checkbox-at" type="checkbox" name="checkbox-at" onchange="document.getElementById('submit-at').disabled = !this.checked;" />
+                  <input type="hidden" name="subject-at" value="Тема формы">
+                  <button type="submit" id="submit-at" class="form-at-btn">Отправить</button>
+              </div>
+              <div class="result-at"></div>
+          </div>
+             <!-- partial:index.partial.html -->
+          <div class="star">
+          
+            <input name="star" value="5" type="radio" id="r1">
+            <label for="r1"></label>
+          
+            <input name="star" value="4" type="radio" id="r2">
+            <label for="r2"></label>
+          
+            <input name="star" value="3" type="radio"  id="r3">
+            <label for="r3"></label>
+          
+            <input name="star" value="2" type="radio" id="r4">
+            <label for="r4"></label>
+          
+            <input name="star" value="1" type="radio" id="r5">
+            <label for="r5"></label>
+          
+          </div>
+          </form>
+    </section>
+
+      <!-- Контакты -->
+      <section class="contact">
+          <div class="container-1">
+            <h2>КОНТАКТЫ</h2>
+            <div class="contact-wrapper">
+              <div class="contact-form">
+                <h3>У Вас есть интересующие вопросы? Заполните заявку и мы обязательно с вами свяжемся!</h3>
+                <form action="/consultation" method="POST">
+                  <div class="form-group">
+                    <input type="text" name="lastname" placeholder="Ваша Фамилия">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="firstname" placeholder="Ваше Имя">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="patronymic" placeholder="Ваше Отчество">
+                  </div>
+                  <div class="form-group">
+                    <input id="phone" name="phone" class="no-arrow" value="" type="number" placeholder="Ваш номер телефона">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" placeholder="Ваша почта">
+                  </div>
+                  <div class="form-group">
+                    <textarea name="message" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                  <button type="submit">Отправить</button>
+                </form>>
+              </div>
+              <div class="contact-info">
+                <p id="contactsPhone"><i class="fas fa-phone"></i> +7 (986)-921-74-33</p>
+                <p id="contactsEmail"><i class="fas fa-envelope"></i>Почта email: izyskatelplusalmet@mail.ru</p>
+                <p id="contactsAddress"><i class="fas fa-map-marker-alt"></i>Республика Татарстан, г. Альметьевск, ул. Абдулаева д.2</p>
+              </div>
+            </div>
+            <div class id="col-lg-8 order-lg-1 map-area">
+							<script id="contactsMap" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4035fb596237c119a0b4042f92a57aec10d10773a10118222d17854c46d33c2f&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+          </div>
+      </section>
+  
+<footer class="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </div>
+</body>
+</html>

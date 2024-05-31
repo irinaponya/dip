@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Подтверждение восстановления</title>
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/css/code.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+   <script src="/js/code.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <i class="bx bxs-check-shield"></i>
+      </header>
+      <h4>Введите 4-значный код</h4>
+      <h4>для подтверждения Вашей электронной почты.</h4>
+      <div class="error">
+        <%= message %>
+      </div>
+      <div hidden id="email"><%= email %></div>
+      <div hidden id="verificationCode"><%= verificationCode %></div>
+      <form action="/code" method="POST">
+        <div class="input-field">
+          <input id="firstNum" name="firstNum" type="number" />
+          <input id="secondNum" name="secondNum" type="number" disabled />
+          <input id="thirdNum" name="thirdNum" type="number" disabled />
+          <input id="fourthNum" name="fourthNum" type="number" disabled />
+          <input id="emailIn" name="email" type="text" hidden>
+          <input id="verCode" name="verCode" type="text" hidden>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </body>
+</html>

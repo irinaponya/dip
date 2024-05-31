@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход в личный кабинет</title> 
+  <link rel="stylesheet" href="/css/style.css"> 
+  <script src="/js/auto.js" defer></script>
+  <link rel="icon" href="/img/logo.png">
+ </head> 
+ <body> 
+
+    
+    <div class="wrapper">
+        <div class="form-wrapper forgot">
+            <form action="/drop" method="POST">
+                <h2>Восстановление пароля</h2>
+                <div class="input-group">
+                    <input id="email" name="email" type="text" required>
+                    <label for="">Введите Email</label>
+                </div>
+                <button type="submit" class="btn">Сбросить пароль</button>
+                <div class="sign-link">
+                    <a href="#" class="signIn-link">Вернуться на страницу входа</a>
+                </div>
+            </form>
+        </div>
+    
+        <div class="form-wrapper sign-in">
+            <form action="/login" method="POST">
+                <h2>Авторизация</h2>
+                <div class="input-group">
+                    <input type="text" id="username" name="username" required>
+                    <label for="">Логин</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="">Пароль</label>
+                </div>
+                <div class="error">
+                    <%= message %>
+                </div>
+                <button id="submitForm" type="submit" class="btn">Войти</button>
+                <div class="sign-link">
+                    <p>Вы забыли пароль? <a href="#" class="forgot-link">Восстановление пароля</a></p>
+                </div>
+                <div class="sign-link">
+                    <p>Нет аккаунта? <a href="" class="register">Зарегистрироваться</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+ </body>
+</html>

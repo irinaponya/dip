@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сообщение</title>
+    <link rel="icon" href="/img/logo.png">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/code.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <i id="iconError" class="bx bxs-error"></i>
+        <i id="iconOk" class="bx bxs-check-shield"></i>
+      </header>
+      <h4 id="text"><%= message %></h4>
+      <div hidden id="message"><%= code %></div>
+      <a style="text-decoration: none; color: #0E4BF1; font-size: 20px;" href="/">Вернуться на главную</a>
+    </div>
+    <script>
+        if(document.getElementById('message').textContent == 0){
+            document.getElementById('text').style.color = 'red';
+            document.getElementById('iconError').style.display = 'block';
+            document.getElementById('iconOk').style.display = 'none';
+        }else{
+            document.getElementById('iconError').style.display = 'none';
+            document.getElementById('iconOk').style.display = 'block';
+        }
+    </script>
+  </body>
+</html>
